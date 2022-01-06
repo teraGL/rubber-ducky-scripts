@@ -1,8 +1,17 @@
-# rubber-payloads
-Rubber Ducky payloads
+# Rubber Ducky payloads
 
-Linux
+## Linux
 
-MacOS
+### How to build
+```
+java -jar /path/to/file/duckencoder.jar -i ~/sshwebhook.rub -o /media/YOUR_DEVICE_NAME/inject.bin
+```
 
-Windows
+Clone the following repo to use the duckencoder.jar file:
+https://github.com/hak5darren/USB-Rubber-Ducky
+
+## MacOS
+TODO:
+
+## Windows
+TODO:
